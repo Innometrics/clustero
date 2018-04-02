@@ -7,12 +7,12 @@ const exit = () => process.exit();
 
 const createGracefulKiller = workerId => {
     let inProgress = false;
-    return (killApp = exit) => {
+    return (killApp = exit, logger = console) => {
         if (inProgress) {
             return;
         }
         inProgress = true;
-        console.log(`Worker #${workerId}: Stopping the app`);
+        logger.info(`Worker #${workerId}: Stopping the app`);
 
         killApp(exit);
 
