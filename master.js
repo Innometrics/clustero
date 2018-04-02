@@ -22,7 +22,7 @@ exports.setupMaster = settings => {
         console.info(`${name} (ID=${id}) died with code ${code}, signal is ${signal}`);
         const newWorker = cluster.fork();
         newWorker.name = name;
-        console.info(`${name} restarted (new ID=${id})`);
+        console.info(`${name} restarted (new ID=${newWorker.id})`);
     });
 
     function shutdown () {
