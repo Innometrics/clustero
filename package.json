@@ -1,0 +1,12 @@
+{
+    "name": "clustero",
+    "version": "0.0.1",
+    "description": "",
+    "private": true,
+    "devDependencies": {
+        "eslint": "^4.18.2"
+    },
+    "scripts": {
+        "lint": "eslint *.js"
+    }
+}
